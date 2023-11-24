@@ -3,21 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpeedMGT</title>
+    <title>Cadastro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kadwa&family=Poppins&display=swap');
+    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Pagina de contato</h1>
-    <a href="./index.html"> Ir para sobre nós</a><br><br>
+    <div class="flex">    
+        <div class="w-full flex md:p-4 md:w-full md:justify-between justify-center">
+            <img src="img/Logo.png" class="w-[150px]" alt="">
+            <div class="md:w-[40%]">
+                <ul class="md:flex md:justify-between md:items-center md:list-none md:text-xl md:font-[Poppins] hidden">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobreNos.html">Sobre nós</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="flex">
+                <a href="login.html" class="w-[150px] h-[30px] bg-[#2F2F2F] md:flex hidden rounded-3xl shadow-xl text-white font-[Poppins] flex justify-center items-center mr-6">Login</a>
+                <a href="cadastro.html" class="w-[150px] h-[30px] bg-[#2F2F2F] md:flex hidden rounded-3xl shadow-xl text-white font-[Poppins] flex justify-center items-center">Cadastro</a>
+            </div>
+            <a href=""><img src="img/Carrinho.png" class="md:flex hidden" alt=""></a>
+        </div>
+        <!-- NavBar Mobile -->
+        <div class="flex justify-end md:hidden">
+            <div id="mobile" class="btn-mobile"> 
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
 
-    <form action="https://webhook.site/f8f9abf6-8655-4ba1-b9b0-0c4aec9cc44d" method="post">
-        <label for="Dados Cadastrais">
-            <input type="text" id="nome" name="nome" placeholder="Nome Completo"><br><br>
-            <input type="text" id="email" name="email" placeholder="Email"><br><br>
-            <input type="tel" id="tel" name="tel" placeholder="Celular"><br><br>
-            <input type="password" id="senha" name="senha" placeholder="Senha"><br><br>
-            <input type="password" id="confirmar" name="confirmar" placeholder="Confirmar senha"><br><br>
-            <input type="submit" placeholder="Enviar">
-        </label>
-    </form>
+        <div id="topic" class="logo-topic">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobreNos.html">Sobre nós</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li>Carrinho</li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="w-full h-full flex flex-col sm:flex-row justify-center items-center">
+        <div class="w-full justify-center md:w-1/2 md:flex hidden">
+            <img src="./img/Card.png" alt="Imagem Logo login" class="w-[10vh]  md:w-1/2">
+        </div>
+        <div class="md:w-1/2 flex justify-center md:justify-between h-[60vh] items-center">
+            <form class="bg-[#F3EFEF] w-[90%] h-[100%] p-3 rounded-3xl md:w-2/3" method="post">
+                <div class="flex flex-col h-[20%] w-full items-center justify-center mb-2">
+                    <h1 class="font-bold text-xl text-[#383C3E] text-center ">Cadastro</h1>
+                    <p class="text-[#737B7D] text-md text-justify p-2">Se cadastre-se para acessar os beneficios da plataforma!!</p>
+                </div>
+                <div class="flex flex-col h-[80%] justify-around">
+                    <div class="flex mb-3 flex-col h-[10%] ">
+                        <label for="senha" class="font-semibold">E-mail:</label>
+                        <input type="email" id="email" placeholder="Ex: email@gmail.com" class="bg-transparent border-b-[1px] border-b-black"/>
+                    </div>
+                    <div class="w-full flex mb-3 flex-col justify-between">
+                        <label for="nome" class="font-semibold">Nome:</label>
+                        <input type="text" id="nome" placeholder="Ex: Jose Silva Aroldo" class="bg-transparent border-b-[1px] border-b-black"/>
+                    </div>
+                    <div class="w-full flex mb-3 flex-col justify-between">
+                        <label for="nome" class=" font-semibold">Data nascimento:</label>
+                        <input type="date" class="bg-transparent border-b-[1px] border-b-black "/>
+                    </div>
+                    <div class="w-full flex mb-3 flex-col justify-between">
+                        <label for="nome" class=" font-semibold">CEP</label>
+                        <input type="text" placeholder="Ex: 13196-000" class="bg-transparent border-b-[1px] border-b-black "/>
+                    </div>
+                    
+                    <div class="flex mb-3 flex-col h-[12] ">
+                        <label class="font-semibold" for="senha" >Senha:</label>
+                        <input type="password" id="senha" placeholder="Ex: senha@gmail.com" class="bg-transparent border-b-[1px] border-b-black"/>
+                    </div>
+                    <div class="w-full flex justify-center">
+                        <input type="submit" class="w-1/2 bg-[#008F17] p-2 text-white font-semibold rounded-sm" value="Cadastrar">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="mt-60 bg-[#1E2833] p-10">
+        <div>
+            <img src="img/Logo_Black.png" alt="">
+            <div class="w-full h-[1px] bg-white opacity-10 mt-4"></div>
+            <div class=":px-10 w-full flex justify-between max-md:flex-col">
+                <div class="h-[150px] flex flex-col justify-evenly">
+                    <p class="text-lg text-[#FFD2DD] tracking-wide">Equipe</p>
+                    <p class="text-lg text-white tracking-wide">Gabriel Batista</p>
+                    <p class="text-lg text-white tracking-wide">Michael Douglas</p>
+                    <p class="text-lg text-white tracking-wide">Thales Yan</p>
+                </div>
+                <div class="h-[150px] flex flex-col justify-evenly">
+                    <p class="text-lg text-[#FFD2DD] tracking-wide">Envolvidos</p>
+                    <p class="text-lg text-white tracking-wide">João Ronaldo</p>
+                    <p class="text-lg text-white tracking-wide">Unimetrocamp</p>
+                    <p class="text-lg text-white tracking-wide">Wyden</p>
+                </div>
+                <div class="h-[150px] flex flex-col justify-evenly">
+                    <p class="text-lg text-[#FFD2DD] tracking-wide">Ajuda</p>
+                    <p class="text-lg text-white tracking-wide">Sobre Nós</p>
+                    <p class="text-lg text-white tracking-wide">Contato</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/Mobile.js"></script>
+
 </body>
+
 </html>

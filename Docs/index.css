@@ -1,0 +1,75 @@
+.btn-mobile{
+    width: 100px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    align-items: flex-end;
+    cursor: pointer;
+    transition: 0.25s;
+    z-index: 999;
+}
+.btn-mobile>div {
+    width: 60px;
+    height: 5px;
+    background-color: #707070;
+    border-radius: 50px;
+    transition: all ease-in .3s;
+
+}
+
+.btn-mobile>div:nth-child(2) {
+    width: 40px;
+}
+
+.btn-mobile>div:nth-child(3) {
+    width: 20px;
+}
+
+.btn-mobile:hover div {
+    width: 50%;
+}
+
+
+.btn-mobile.active>div:nth-child(2){
+    display: none;
+}
+
+.btn-mobile.active>div:nth-child(1){
+    width: 60px;
+    transform: rotate(-45deg) translateY(10px) translateX(-30px);
+}
+
+.btn-mobile.active>div:nth-child(3){
+    width: 60px;
+    transform: rotate(45deg) translateY(10px) translateX(-12px);
+}
+
+.logo-topic > ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;
+    top: 67px;
+    right: 0;
+    background: linear-gradient(305deg, #EFDF8A 57.1%, #FCFBF7 145.5%);
+    font-size: 2rem;
+    line-height: 1.75rem;
+    color: #707070;
+    height: 0;
+    transition: .6s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+}
+
+.logo-topic.active > ul{
+    height: 24%;
+    visibility: visible;
+    overflow-y: auto;
+}
+body{
+    background: linear-gradient(305deg, #EFDF8A 57.1%, #FCFBF7 145.5%);
+}

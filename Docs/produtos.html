@@ -1,14 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kadwa&family=Poppins&display=swap');
+    </style>
+    <link rel="stylesheet" href="index.css">
+    <title>SpeedMGT</title>
 </head>
 <body>
-    <h1>Pagina de produtos</h1>
-    <a href="./index.html"> Ir para sobre nós</a>
-    
-    
+    <div class="w-full h-full">
+       <!-- navBar -->
+       <div class="flex">    
+        <div class="w-full flex md:p-4 md:w-full md:justify-between justify-center">
+            <img src="img/Logo.png" class="w-[150px]" alt="">
+            <div class="md:w-[40%]">
+                <ul class="md:flex md:justify-between md:items-center md:list-none md:text-xl md:font-[Poppins] hidden">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobreNos.html">Sobre nós</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="flex">
+                <a href="login.html" class="w-[150px] h-[30px] bg-[#2F2F2F] md:flex hidden rounded-3xl shadow-xl text-white font-[Poppins] flex justify-center items-center mr-6">Login</a>
+                <a href="cadastro.html" class="w-[150px] h-[30px] bg-[#2F2F2F] md:flex hidden rounded-3xl shadow-xl text-white font-[Poppins] flex justify-center items-center">Cadastro</a>
+            </div>
+            <a href=""><img src="img/Carrinho.png" class="md:flex hidden" alt=""></a>
+        </div>
+        <!-- NavBar Mobile -->
+        <div class="flex justify-end md:hidden">
+            <div id="mobile" class="btn-mobile"> 
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div id="topic" class="logo-topic">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobreNos.html">Sobre nós</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li>Carrinho</li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+        <!-- Produtos -->
+        <div class="p-4 flex flex-wrap justify-between items-center">
+            <div class="w-[200px] h-[350px] rounded-3xl bg-[#1E2833] flex flex-col items-center pt-4 m-10">
+                <img src="img/Produto_1.png" class="w-[150px] h-[180px] rounded-lg" alt="">
+                <div class="text-center text-white h-[40%] flex flex-col justify-around  items-center">
+                    <p class="text-xs font-[Kadwa]">Brahma Duplo Malte Latão- 6 unidades</p>
+                    <h2 class="text-2xl text-[#77B725] font-bold">R$ 40,00</h2>
+                    <button class="w-[130px] h-[40px] bg-[#448F3E] rounded-3xl shadow-xl">Comprar</button>
+                </div>
+            </div>
+
+            <div class="w-[200px] h-[350px] rounded-3xl bg-[#1E2833] flex flex-col items-center pt-4 m-10">
+                <img src="img/Produto_2.png" class="w-[150px] h-[180px] rounded-lg" alt="">
+                <div class="text-center text-white h-[50%] flex flex-col justify-around items-center">
+                    <p class="text-xs font-[Kadwa]">Heineken Garrafa Long-Neck</p>
+                    <h2 class="text-2xl text-[#77B725] font-bold">R$ 40,00</h2>
+                    <button class="w-[130px] h-[40px] bg-[#448F3E] rounded-3xl shadow-xl">Comprar</button>
+                </div>
+            </div>
+
+            <div class="w-[200px] h-[350px] rounded-3xl bg-[#1E2833] flex flex-col items-center pt-4 m-10">
+                <img src="img/Produto_3.png" class="w-[150px] h-[180px] rounded-lg" alt="">
+                <div class="text-center text-white h-[40%] flex flex-col justify-around  items-center">
+                    <p class="text-xs font-[Kadwa]">Cerveja Original - 650ML</p>
+                    <h2 class="text-2xl text-[#77B725] font-bold">R$ 40,00</h2>
+                    <button class="w-[130px] h-[40px] bg-[#448F3E] rounded-3xl shadow-xl">Comprar</button>
+                </div>
+            </div>
+
+            <div class="w-[200px] h-[350px] rounded-3xl bg-[#1E2833] flex flex-col items-center pt-4 m-10">
+                <img src="img/Produto_4.png" class="w-[150px] h-[180px] rounded-lg" alt="">
+                <div class="text-center text-white h-[40%] flex flex-col justify-around  items-center">
+                    <p class="text-xs font-[Kadwa]">SKOL lata - 350 ml</p>
+                    <h2 class="text-2xl text-[#77B725] font-bold">R$ 40,00</h2>
+                    <button class="w-[130px] h-[40px] bg-[#448F3E] rounded-3xl shadow-xl">Comprar</button>
+                </div>
+            </div>
+
+            <div class="w-[200px] h-[350px] rounded-3xl bg-[#1E2833] flex flex-col items-center pt-4 m-10">
+                <img src="img/Produto_5.png" class="w-[150px] h-[180px] rounded-lg" alt="">
+                <div class="text-center text-white h-[40%] flex flex-col justify-around  items-center">
+                    <p class="text-xs font-[Kadwa]">Budweiser Long-Neck</p>
+                    <h2 class="text-2xl text-[#77B725] font-bold">R$ 40,00</h2>
+                    <button class="w-[130px] h-[40px] bg-[#448F3E] rounded-3xl shadow-xl">Comprar</button>
+                </div>
+            </div>
+
+            <div class="w-[200px] h-[350px] rounded-3xl bg-[#1E2833] flex flex-col items-center pt-4 m-10">
+                <img src="img/Produto_6.png" class="w-[150px] h-[180px] rounded-lg" alt="">
+                <div class="text-center text-white h-[40%] flex flex-col justify-around  items-center">
+                    <p class="text-xs font-[Kadwa]">Spaten Long - Neck</p>
+                    <h2 class="text-2xl text-[#77B725] font-bold">R$ 40,00</h2>
+                    <button class="w-[130px] h-[40px] bg-[#448F3E] rounded-3xl shadow-xl">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="mt-60 bg-[#1E2833] p-10">
+            <div>
+                <img src="img/Logo_Black.png" alt="">
+                <div class="w-full h-[1px] bg-white opacity-10 mt-4"></div>
+                <div class=":px-10 w-full flex justify-between max-md:flex-col">
+                    <div class="h-[150px] flex flex-col justify-evenly">
+                        <p class="text-lg text-[#FFD2DD] tracking-wide">Equipe</p>
+                        <p class="text-lg text-white tracking-wide">Gabriel Batista</p>
+                        <p class="text-lg text-white tracking-wide">Michael Douglas</p>
+                        <p class="text-lg text-white tracking-wide">Thales Yan</p>
+                    </div>
+                    <div class="h-[150px] flex flex-col justify-evenly">
+                        <p class="text-lg text-[#FFD2DD] tracking-wide">Envolvidos</p>
+                        <p class="text-lg text-white tracking-wide">João Ronaldo</p>
+                        <p class="text-lg text-white tracking-wide">Unimetrocamp</p>
+                        <p class="text-lg text-white tracking-wide">Wyden</p>
+                    </div>
+                    <div class="h-[150px] flex flex-col justify-evenly">
+                        <p class="text-lg text-[#FFD2DD] tracking-wide">Ajuda</p>
+                        <p class="text-lg text-white tracking-wide">Sobre Nós</p>
+                        <p class="text-lg text-white tracking-wide">Contato</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/Mobile.js"></script>
 </body>
 </html>
