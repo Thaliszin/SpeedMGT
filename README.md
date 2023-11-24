@@ -6,3 +6,5 @@ Site realizado na matéria de programação web com o professor João Ronaldo re
   * Gabriel de Oliveira Batista - RA: 202303395256 
   * Michael Douglas Camilo Lopes - RA: 202303474466 
   * Thales Yan Telles Costa - RA: 202302377301 
+
+<a href="https://thaliszin.github.io/SpeedMGT/Docs/index.html">Ir para o site </a>
