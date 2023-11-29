@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+        <title>SpeedMGT</title>
+    </head>
+<body>
+    <div class="w-full h-full">
+        <!-- navBar -->
+        <div class="flex">    
+            <div class="w-full flex md:p-4 md:w-full md:justify-between justify-center">
+                <img src="img/Logo.png" class="w-[150px]" alt="">
+                <div class="md:w-[40%]">
+                    <ul class="md:flex md:justify-between md:items-center md:list-none md:text-xl md:font-[Poppins] hidden">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobreNos.html">Sobre nós</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="flex">
+                    <a href="login.html" class="w-[150px] h-[30px] bg-[#2F2F2F] md:flex hidden rounded-3xl shadow-xl text-white font-[Poppins] flex justify-center items-center mr-6">Login</a>
+                    <a href="cadastro.html" class="w-[150px] h-[30px] bg-[#2F2F2F] md:flex hidden rounded-3xl shadow-xl text-white font-[Poppins] flex justify-center items-center">Cadastro</a>
+                </div>
+                <a href="carrinho.html"><img src="img/Carrinho.png" class="md:flex hidden" alt=""></a>
+            </div>
+            <!-- NavBar Mobile -->
+            <div class="flex justify-end md:hidden">
+                <div id="mobile" class="btn-mobile"> 
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            
+            <div id="topic" class="logo-topic">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobreNos.html">Sobre nós</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="carrinho.html">Carrinho</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                
+            </div>
+        </div>
+        
+        <!-- Produtos -->
+        <div>
+            <h1 class="text-sm lg:text-2xl font-bold">Carrinho</h1>
+        </div>
+        <div id="lista-produtos-comprados" class="p-4 lg:w-[50%] lg:m-auto flex flex-col flex-wrap items-center min-h-[calc(100vh-337px)]">
+          <!-- <div class="flex w-full justify-between border-b-[1px] border-b-black items-center">
+            <div class="flex w-[50%]">
+                <img src="img/Produto_1.png" class="w-[70px] h-[70px] lg:w-[100px]"/>
+                <div class="flex flex-col items-center ml-10">
+                    <div class="mb-2">
+                        <p class="text-sm lg:text-2xl font-semibold">Brahma AAAAAAAAAAAAA</p>
+                        <p class="text-sm font-medium">Quantidade: 10</p>
+                    </div>
+                    <div class="flex justify-between w-16">
+                        <button onclick="removerProduto()" class="bg-[#2F2F2F] md:flex  rounded-full shadow-xl text-white font-[Poppins] flex justify-center items-center px-1 hover:bg-red-600"> - </button>
+                        <p class="text-sm ">0</p>
+                        <button onclick="removerProduto()" class="bg-[#2F2F2F] md:flex  rounded-full shadow-xl text-white font-[Poppins] flex justify-center items-center px-1 hover:bg-red-600"> + </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center">
+               <p class="text-sm lg:text-2xl text-[#77B725] font-bold mr-6">R$ 10,99</p>
+                 <button onclick="removerProduto()" class="bg-[#2F2F2F] md:flex  rounded-full shadow-xl text-white font-[Poppins] flex justify-center items-center px-1 hover:bg-red-600"> X </button>
+            
+            </div>
+          </div> -->
+                
+        </div>
+        <div class="w-full md:w-[50%] md:m-auto bg-white h-20 flex justify-around items-center rounded-xl">
+            <div class="flex justify-around w-[50%]">
+                <button onclick="fazerPedido()" class="w-[70px] md:w-[30%] h-[50px] bg-green-700 rounded-lg shadow-xl text-white font-[Poppins] flex justify-center items-center" id="btnfazerPedido" >Fazer Pedido</button>
+                <button onclick="apagarCarrinho()" class="w-[70px] md:w-[30%] h-[50px] bg-red-600 rounded-lg shadow-xl text-white font-[Poppins] flex justify-center items-center" id="btnApagarCarrinho" >Apagar Carrinho</button>
+            </div>
+            <div class="flex justify-center items-center">
+                <h1 class="font-bold text-xl mr-2">Total:</h1>
+                <p class="text-xl text-[#77B725] font-bold " id="totalCompra">R$ 00.00</p>
+            </div>
+        </div>
+        <div class="w-full md:w-[50%] h-20 flex items-center rounded-xl">
+            <h1 class="text-sm lg:text-2xl font-bold">Pedidos Feitos:</h1>
+        </div>
+        <div id="lista-pedidos" class="p-4 lg:w-[50%] lg:m-auto flex flex-col flex-wrap items-center min-h-[calc(100vh-337px)]">
+
+        </div>
+        <!-- footer -->
+        <div class="bg-[#1E2833] p-10">
+            <div>
+                <img src="img/Logo_Black.png" alt="">
+                <div class="w-full h-[1px] bg-white opacity-10 mt-4"></div>
+                <div class=":px-10 w-full flex justify-between max-md:flex-col">
+                    <div class="h-[150px] flex flex-col justify-evenly">
+                        <p class="text-lg text-[#FFD2DD] tracking-wide">Equipe</p>
+                        <p class="text-lg text-white tracking-wide">Gabriel Batista</p>
+                        <p class="text-lg text-white tracking-wide">Michael Douglas</p>
+                        <p class="text-lg text-white tracking-wide">Thales Yan</p>
+                    </div>
+                    <div class="h-[150px] flex flex-col justify-evenly">
+                        <p class="text-lg text-[#FFD2DD] tracking-wide">Envolvidos</p>
+                        <p class="text-lg text-white tracking-wide">João Ronaldo</p>
+                        <p class="text-lg text-white tracking-wide">Unimetrocamp</p>
+                        <p class="text-lg text-white tracking-wide">Wyden</p>
+                    </div>
+                    <div class="h-[150px] flex flex-col justify-evenly">
+                        <p class="text-lg text-[#FFD2DD] tracking-wide">Ajuda</p>
+                        <p class="text-lg text-white tracking-wide">Sobre Nós</p>
+                        <p class="text-lg text-white tracking-wide">Contato</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/Mobile.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/Carrinho.js"></script>
+    <script src="js/Pedidos.js"></script>
+</body>
+</html>

@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kadwa&family=Poppins&display=swap');
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="flex">    
-        <div class="w-full flex md:p-4 md:w-full md:justify-between justify-center">
+        <div class="w-full flex md:p-4 md:w-full md:justify-between justify-center items-center">
             <img src="img/Logo.png" class="w-[150px]" alt="">
             <div class="md:w-[40%]">
                 <ul class="md:flex md:justify-between md:items-center md:list-none md:text-xl md:font-[Poppins] hidden">
@@ -26,7 +26,7 @@
                 <a href="login.html" class="w-[150px] h-[30px] bg-[#2F2F2F] md:flex hidden rounded-3xl shadow-xl text-white font-[Poppins] flex justify-center items-center mr-6">Login</a>
                 <a href="cadastro.html" class="w-[150px] h-[30px] bg-[#2F2F2F] md:flex hidden rounded-3xl shadow-xl text-white font-[Poppins] flex justify-center items-center">Cadastro</a>
             </div>
-            <a href=""><img src="img/Carrinho.png" class="md:flex hidden" alt=""></a>
+            <a href="carrinho.html"><img src="img/Carrinho.png" class="md:flex hidden" alt=""></a>
         </div>
         <!-- NavBar Mobile -->
         <div class="flex justify-end md:hidden">
@@ -43,53 +43,74 @@
                 <li><a href="sobreNos.html">Sobre nós</a></li>
                 <li><a href="produtos.html">Produtos</a></li>
                 <li><a href="login.html">Login</a></li>
-                <li>Carrinho</li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
 
         </div>
     </div>
-    <div class="w-full h-full flex flex-col sm:flex-row justify-center items-center">
+    <div class="w-full min-h-[95vh] flex flex-col sm:flex-row justify-center items-center ">
         <div class="w-full justify-center md:w-1/2 md:flex hidden">
             <img src="./img/Card.png" alt="Imagem Logo login" class="w-[10vh]  md:w-1/2">
         </div>
-        <div class="md:w-1/2 flex justify-center md:justify-between h-[60vh] items-center">
-            <form class="bg-[#F3EFEF] w-[90%] h-[100%] p-3 rounded-3xl md:w-2/3" method="post">
+        <div class="md:w-1/2 flex justify-center md:justify-between items-center">
+            <form id="formulario" class="bg-[#F3EFEF] w-[90%] p-3 rounded-3xl md:w-2/3">
                 <div class="flex flex-col h-[20%] w-full items-center justify-center mb-2">
                     <h1 class="font-bold text-xl text-[#383C3E] text-center ">Cadastro</h1>
                     <p class="text-[#737B7D] text-md text-justify p-2">Se cadastre-se para acessar os beneficios da plataforma!!</p>
                 </div>
+            
                 <div class="flex flex-col h-[80%] justify-around">
-                    <div class="flex mb-3 flex-col h-[10%] ">
-                        <label for="senha" class="font-semibold">E-mail:</label>
-                        <input type="email" id="email" placeholder="Ex: email@gmail.com" class="bg-transparent border-b-[1px] border-b-black"/>
+                    <div class="flex mb-3 flex-col h-[10%]">
+                        <label for="email" class="font-semibold">E-mail:</label>
+                        <input required type="email" id="email" placeholder="Ex: email@gmail.com" class="bg-transparent border-b-[1px] border-b-black"/>
                     </div>
                     <div class="w-full flex mb-3 flex-col justify-between">
-                        <label for="nome" class="font-semibold">Nome:</label>
-                        <input type="text" id="nome" placeholder="Ex: Jose Silva Aroldo" class="bg-transparent border-b-[1px] border-b-black"/>
+                        <label for="nome" class="font-semibold">Nome Completo:</label>
+                        <input required type="text" id="nome" placeholder="Ex: Jose Silva Aroldo" class="bg-transparent border-b-[1px] border-b-black"/>
                     </div>
                     <div class="w-full flex mb-3 flex-col justify-between">
-                        <label for="nome" class=" font-semibold">Data nascimento:</label>
-                        <input type="date" class="bg-transparent border-b-[1px] border-b-black "/>
+                        <label for="dataNascimento" class=" font-semibold">Data nascimento:</label>
+                        <input required type="date" id="dataNascimento" class="bg-transparent border-b-[1px] border-b-black"/>
                     </div>
                     <div class="w-full flex mb-3 flex-col justify-between">
-                        <label for="nome" class=" font-semibold">CEP</label>
-                        <input type="text" placeholder="Ex: 13196-000" class="bg-transparent border-b-[1px] border-b-black "/>
+                        <label for="cep" class=" font-semibold">CEP</label>
+                        <input required type="number" id="cep" placeholder="Ex: 13196000" class="bg-transparent border-b-[1px] border-b-black"/>
                     </div>
-                    
-                    <div class="flex mb-3 flex-col h-[12] ">
-                        <label class="font-semibold" for="senha" >Senha:</label>
-                        <input type="password" id="senha" placeholder="Ex: senha@gmail.com" class="bg-transparent border-b-[1px] border-b-black"/>
+                    <div class="w-full flex mb-3 flex-col justify-between">
+                        <label for="Logradouro" class=" font-semibold">Logradouro</label>
+                        <input required type="text" id="Logradouro" placeholder="Ex: Avenida Brasil" class="bg-transparent border-b-[1px] border-b-black"/>
+                    </div>
+                    <div class="w-full flex mb-3 flex-col justify-between">
+                        <label for="Numero" class=" font-semibold">Numero</label>
+                        <input required type="number" id="Numero" placeholder="Ex: 1024" class="bg-transparent border-b-[1px] border-b-black"/>
+                    </div>
+                    <div class="w-full flex mb-3 flex-col justify-between">
+                        <label for="Bairro" class=" font-semibold">Bairro</label>
+                        <input required required type="text" id="Bairro" placeholder="Ex: Jardim Alphavile" class="bg-transparent border-b-[1px] border-b-black"/>
+                    </div>
+                    <div class="w-full flex mb-3 flex-col justify-between">
+                        <label for="Cidade" class=" font-semibold">Cidade</label>
+                        <input required type="text" id="Cidade" placeholder="Ex: Campinas" class="bg-transparent border-b-[1px] border-b-black"/>
+                    </div>
+                    <div class="w-full flex mb-3 flex-col justify-between">
+                        <label for="UF" class=" font-semibold">UF</label>
+                        <input required type="text" id="UF" placeholder="Ex: SP" class="bg-transparent border-b-[1px] border-b-black"/>
+                    </div>
+                    <div class="flex mb-3 flex-col h-[12]">
+                        <label for="senha" class="font-semibold">Senha:</label>
+                        <input required type="password" id="senha" class="bg-transparent border-b-[1px] border-b-black"/>
                     </div>
                     <div class="w-full flex justify-center">
-                        <input type="submit" class="w-1/2 bg-[#008F17] p-2 text-white font-semibold rounded-sm" value="Cadastrar">
+                        <input id="btnCadastrar" type="submit" title="cadastrar" class="w-1/2 bg-[#008F17] p-2 text-white font-semibold rounded-sm" />
                     </div>
                 </div>
             </form>
         </div>
 
     </div>
-    <div class="mt-60 bg-[#1E2833] p-10">
+    <div class="bg-[#1E2833] p-10">
         <div>
             <img src="img/Logo_Black.png" alt="">
             <div class="w-full h-[1px] bg-white opacity-10 mt-4"></div>
@@ -115,7 +136,8 @@
         </div>
     </div>
     <script src="js/Mobile.js"></script>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/CadastrarUsuario.js"></script>
 </body>
 
 </html>
